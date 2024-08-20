@@ -1,0 +1,65 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/road/protos/CurvedRoadSegment.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/tesla/TeslaModel3.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.04506396833624384 -0.9596717827326435 -0.27748749194250183 5.94784984251541
+  position -44.28716359128495 -9.200967025735128 22.01331784999185
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Solid {
+  children [
+    DEF ground Shape {
+      appearance PBRAppearance {
+        roughness 1
+        metalness 0
+      }
+      geometry Plane {
+        size 200 500
+      }
+    }
+  ]
+  boundingObject USE ground
+}
+CurvedRoadSegment {
+  translation 0 0 0.005
+  numberOfLanes 3
+  numberOfForwardLanes 2
+  rightBorder FALSE
+  leftBorder FALSE
+  rightBarrier TRUE
+  leftBarrier TRUE
+  roadBoundingObject TRUE
+}
+TeslaModel3 {
+  hidden linearVelocity_0 1.7853289734163243e-05 0.00016649655682667345 0.000695179460964339
+  hidden angularVelocity_0 6.1288941332578e-05 0.00018324710143222968 0.00014941261284653432
+  hidden translation_1 0 0 0
+  hidden rotation_1 0.9823697640020675 -0.13220974120610068 0.13217500181478364 1.5885778099936798
+  hidden linearVelocity_1 -2.851149606708327e-05 -3.099640238710458e-05 0.0022808111306637227
+  hidden angularVelocity_1 -0.0011473279629965558 0.00011733906635007475 0.00013001453372506996
+  hidden translation_2 0 0 0
+  hidden rotation_2 0.9802158371985914 0.13995837291384586 -0.13995915960155494 1.5907772811229641
+  hidden linearVelocity_2 -0.0001280106320119562 0.00032912559548336915 0.0014157640880732246
+  hidden angularVelocity_2 -0.0002043042267388266 0.00013949513858113282 0.00013822693406016488
+  hidden translation_3 0 0 0
+  hidden rotation_3 0.9999999411478079 0.00024259474345219816 -0.00024259466417348702 1.5707960588521939
+  hidden linearVelocity_3 0.0001703225616442837 -0.0009280139919208151 0.00035616365305997854
+  hidden angularVelocity_3 0.00302111414069974 0.00020204330795191687 0.00010928395237303748
+  hidden translation_4 0 0 0
+  hidden rotation_4 0.9999999767001982 0.0001526427499840742 -0.00015264270010121063 1.5707960232998017
+  hidden linearVelocity_4 0.0002865876130403615 0.0016733507730529696 -0.0002380103314317183
+  hidden angularVelocity_4 -0.0044004360764769886 0.00015571066621865634 7.765105484918934e-05
+  translation 9.419438704493402 0.41329873674095174 0.1400489300404157
+  rotation 0.004160640262793118 -0.00793552688268133 0.9999598574371362 1.5710589077416375
+  color 0.0235294 1 0.67451
+  controller "my_controller_1"
+}
